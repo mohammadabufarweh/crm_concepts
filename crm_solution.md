@@ -24,5 +24,31 @@
 
 - Source control should be your source of truth for storing and collaborating on your components.
 
+### Solution components
+
+- Solution components are created by using the customization tools or APIs included in Dynamics 365 Customer Engagement (on-premises) and are fully hosted in the application. The following diagram shows the types of solution components.
+
+![6.png](./6.PNG)
+
 
 ## Managed and unmanaged solutions
+
+- There are two types of Dynamics 365 Customer Engagement (on-premises) solutions: managed and unmanaged. A managed solution is a completed solution that is intended to be distributed and installed. An unmanaged solution is one that is still under development or isn't intended to be distributed. When the unmanaged solution is complete and you want to distribute it, export it and package it as a managed solution.
+
+**#### Unmanaged solutions**
+
+**- When a solution is unmanaged, you can perform the following actions:**
+
+- Add components.
+- Remove components.
+- Delete components that allow for deletion.
+- Export and import the unmanaged solution.
+- Export the solution as a managed solution.
+
+
+- There are two type of solution in the CRM 2011.
+
+1. Default Solution: This is the customizations of your entire CRM 2011 Organization.
+
+2. Managed Solution: Managed solution is a packed and user can install it on their machine. The benefit of the Managed solution is that, it can be uninstalled if you do not wish to use any of its components any more. The deleting/uninstalling does not impact any other customization in the system. Unlike CRM 4.0 if you want to remove something, then you need to remove the fields from the Form, delete from the entity and remove the buttons from the ISV config. But in the CRM 2011, if you have imported the managed solution then you need to simply delete this solution, it will automatically remove all the components included in the solution like, Forms Customizations, Fields and Buttons.
+3. Un-Managed Solution: We generally use the unmanaged solution during the development process. An un-managed solution cannot be deleted like the Managed solution. Changes made by importing the unmanaged solution are permanent and is included as a part of the existing entity customizations. If we have imported the Solution on any system as Un Managed, and if we need to remove the that, then we need to remove the each item manually from CRM. 

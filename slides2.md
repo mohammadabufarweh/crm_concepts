@@ -17,7 +17,7 @@ I would call out some specifics here such as the items noted below.  ​
 - CRM is multi-language and new languages can be enabled via settings, multi-currency too​
 - CRM Online subscriptions can be managed through Subscription Management
 
-### 1. Business Management Settings​
+### 2. Business Management Settings​
 
 ![2.png](./2.PNG)
 - In the Business Management Area we have Settings that are related to ongoing business operations, procedures and policies that are unique to each organization​
@@ -42,7 +42,7 @@ I would call out some specifics here such as the items noted below.  ​
 
 - Sites, Facilities/Equipment/Resource Groups, Services, and Business Closures 
 
-### 1. Data Management Settings​
+### 3. Data Management Settings​
 - In the Data Management area, you will find all of you Data settings,  This includes:​
 - Duplicate detection rules can be defined to help identify and manage duplicate records – duplicate detection must be enabled​
 - Data Maps allow for creating reusable mappings for data import​
@@ -67,7 +67,7 @@ I would call out some specifics here such as the items noted below.  ​
    - Any individual file can’t exceed 8MB in size​
 
 
-### 1. Document Management Settings​
+### 4. Document Management Settings​
 
 ![4.png](./4.PNG)
 
@@ -83,7 +83,7 @@ I would call out some specifics here such as the items noted below.  ​
 - Office Graph Integration
 
 
-### 1. Collaboration Settings
+### 5. Collaboration Settings
 
 - Much like Document Management, you may find that CRM’s out of the box activity, and system posts don’t provide your organization with the true collobration functions that you need.  You have the ability to replace the OOB Activity feeds on forms with a Yammer Subscription.  ​
 
