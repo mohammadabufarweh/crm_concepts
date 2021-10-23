@@ -183,6 +183,8 @@ On Assigning record, Ownership will be transferred to new user
 
 # Types of teams
 
+- A team belongs to one business unit, but it can include users from other business units. A user can be associated with more than one team. An owner team owns records and has security roles assigned to the team.
+
 **- Owner team:** An owner team owns records and has security roles assigned to the team. A user's privileges can come from their individual security roles, those of the teams that they're part of or the ones they inherit. A team has full access rights on the records that the team owns. Team members are added manually to the owner team.
 
 **- Access team:** An access team doesn't own records and doesn't have security roles assigned to the team. The team members have privileges defined by their individual security roles and by roles from the teams they're members of. These members share records with an access team, and the t
