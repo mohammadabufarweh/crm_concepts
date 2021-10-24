@@ -54,7 +54,7 @@
 
 - add product to the price list
 
-![19.png](../19.PNG)
+![19.png](../19.png)
 
 <br />
 <br />
@@ -63,52 +63,53 @@
 - price list done 
 
 
-![20.png](../20.PNG)
+![20.png](../20.png)
 
 
 - we are ready to make quotes and send it
 
-![21.png](../21.PNG)
+![21.png](../21.png)
 
 - make disscount 10 percent
 
-![22.png](../22.PNG)
+![22.png](../22.png)
 
 
 - make quotes then activate quote
 
-![23.png](../23.PNG)
+![23.png](../23.png)
 
 -Export to pdf then send it bt customer email
 
-![24.png](../24.PNG)
+![24.png](../24.png)
 
 ### 3. create order
 
 - crete the order and the stautes won
 
-![25.png](../25.PNG)
+![25.png](../25.png)
 
 
 ### 4. create invoice 
 
 - press in create invoice in action bar 
 
-![26.png](../26.PNG)
+![26.png](../26.png)
 
 - then invoice paid 
 
-![27.png](../27.PNG)
+![27.png](../27.png)
 
 - orders 
 
-![28.png](../28.PNG)
+![28.png](../28.png)
 
 - then fulfill order 
 
-![29.png](../29.PNG)
+![29.png](../29.png)
 
-====================================================================================================================
+
+#### The End
 
 
 
