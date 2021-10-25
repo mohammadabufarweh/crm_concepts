@@ -111,14 +111,14 @@
 -  What is the initial status when a campaign response record is created and saved?
    - Closed
    -   Canceled
-   ✔️   Open
+   -  ✔️   Open
    -   Active
 
  
 
     - Which of the following records cannot be added to a marketing list?
     - Contact
-    ✔️ Opportunity
+    - ✔️ Opportunity
     - Account
     - Lead
 
@@ -126,17 +126,17 @@
 
 -  Which of the following statements are true? (Select all that apply).
         - Quick campaigns can track financial information and measure ROI.
-       ✔️ Marketing campaigns can track financial information and measure ROI.
-       ✔️ Marketing campaigns can be saved and created from templates.
-        - Quick campaigns can be saved and created from templates.
+       - ✔️ Marketing campaigns can track financial information and measure ROI.
+       - ✔️ Marketing campaigns can be saved and created from templates.
+        - Quick campaigns can be saved and created from templates..
 
  
 
 - Which of the following actions can you do when distributing campaign activities? (Select all that apply). 
     -  Send emails directly from your campaign template. 
-    ✔️  Send emails to your marketing lists. 
-    ✔️  Assign activities for other users to complete. 
-    ✔️  Prepare files to send to a marketing partner.
+    - ✔️  Send emails to your marketing lists. 
+    - ✔️  Assign activities for other users to complete. 
+    - ✔️  Prepare files to send to a marketing partner.
 
  
 
@@ -144,5 +144,5 @@
      - Static Marketing List
      - Marketing Campaign
      - Dynamic Marketing List
-     ✔️ Quick Campaign
+     - ✔️ Quick Campaign
 
