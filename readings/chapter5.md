@@ -52,7 +52,7 @@ the child record
 6. **Merge**: When the parent record is merged with another record
 7. **Rollup view**: This option is available only when the parent is
 Account, Contact, or Opportunity, and it is related to the Rollup of
-the activities field on the related record
+the activities field on the related recordzz
 
 - [CRM Relationship Behavior](https://www.inogic.com/blog/2009/12/crm-relationship-behavior/)
 
