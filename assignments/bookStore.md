@@ -5,7 +5,7 @@
 
 ![72.png](../72.PNG)
 
-1. **customer Entity:**
+1. **customer Entity :**
 
 ![74.png](../74.png)
 
