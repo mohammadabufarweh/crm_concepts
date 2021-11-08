@@ -1,3 +1,7 @@
+# Car Assignment 
+![98.png](../98.png)
+
+
 ## entities’ forms
 
 - Car 
@@ -18,7 +22,7 @@
 
 - Receptionist
 
-![81.png](../81.png)
+![88.png](../88.png)
 
 - Manager
 
@@ -90,3 +94,19 @@ Create Feild Seven Days Before License end date
 ![94.png](../94.png)
 
 ![95.png](../95.png)
+
+##  An exported solution for the developed system 
+
+- Used CRM version : 1.0.0.0
+- CRM version  2018
+
+![99.png](../99.png)
+
+## Report filter criteria and the result
+
+![100.png](../100.png)
+
+![101.png](../101.png)
+
+![102.png](../102.png)
+
