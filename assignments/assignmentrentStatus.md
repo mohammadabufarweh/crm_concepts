@@ -1,4 +1,19 @@
-function ReadOnly ()
+
+
+## Rent Status Control 
+
+**- Functions Description:**
+
+ 
+
+- Disableform(): A function to disable all form fields ( set all fields to readonly )
+- CheckRentStatus(): When the status is out with customer . You should disable all form fields by calling function DisableForm(). Otherwise, the form is editable again
+
+ 
+- Disableform():
+
+```js
+function Disableform()
 {
  var form = Xrm.Page.ui.controls.get();
  for (var i in form) 
@@ -10,9 +25,15 @@ function ReadOnly ()
   }
  }
 }
+```
+
+![112.png](../112.png)
+
+![113.png](../113.png)
 
 
-function disableWhen(context){
+```js
+function CheckRentStatus(context){
 let carRentForm = context.getFormContext();
 let rentStatus= carRentForm.getAttribute("eng_rentstatus").getValue();
 if(rentStatus == false){
@@ -42,4 +63,4 @@ if(rentStatus == true){
 
 }
 }
-
+```
