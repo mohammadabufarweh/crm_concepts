@@ -17,6 +17,8 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Crm.Sdk.Messages;
+
 // adding our namespace
 using Microsoft.Xrm.Sdk;
 
@@ -55,31 +57,30 @@ namespace ClassLibrary2
                             Contact["lastname"] = "Abufarweh";
                             Contact["parentcustomerid"] = account.ToEntityReference();
                             Mytrace.Trace("2");
-                            service.Create(Contact);
+                        
+                            Guid contactId = service.Create(Contact);
 
-                            Contact = (Entity)context.InputParameters["Target"];
-                            Mytrace.Trace("12345567889");
                          
+                            Mytrace.Trace("12345567889");
+                            
                             Entity Task = new Entity("task");
                             Mytrace.Trace("Got task entity");
                             Task["subject"] = "Contact Created";
-                            Task["regardingobjectid"] = new EntityReference("contact", Contact.Id);
+                            Task["regardingobjectid"] = new EntityReference("contact", contactId);
                             Task["description"] = " Hello world This Is Me ";
                             Mytrace.Trace("set description");
-                            Task["regardingobjectid"] = Contact.ToEntityReference();
+                            
                             Mytrace.Trace("we got our contact ref" + Contact.ToEntityReference().ToString());
                             Task["actualdurationminutes"] = 2;
                             Task["prioritycode"] = new OptionSetValue(2);
                             Task["scheduledend"] = DateTime.Now;
                             Mytrace.Trace("3");
-                            
+            
+                            Mytrace.Trace("969");
                             service.Create(Task);
 
                         }
-                        catch (FaultException<OrganizationServiceFault> ex)
-                        {
-                            throw new InvalidPluginExecutionException("My plugin failed.", ex);
-                        }
+                    
 
                         catch (Exception ex)
                         {
