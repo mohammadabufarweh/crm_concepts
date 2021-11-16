@@ -8,6 +8,8 @@
 **1. Create a contact associated to it. Ex: when a account is created , automatically a contact should be created with any field values. This contact is associated to its parent account**
 
 
+**2. Create a task associated to the contact ( adding to the above point, create a task that has the newly created contact as its regarding )**
+
 ```c#
 using System;
 using System.Collections.Generic;
@@ -54,6 +56,25 @@ namespace ClassLibrary2
                             Contact["parentcustomerid"] = account.ToEntityReference();
                             Mytrace.Trace("2");
                             service.Create(Contact);
+
+                            Contact = (Entity)context.InputParameters["Target"];
+                            Mytrace.Trace("12345567889");
+                         
+                            Entity Task = new Entity("task");
+                            Mytrace.Trace("Got task entity");
+                            Task["subject"] = "Contact Created";
+                            Task["regardingobjectid"] = new EntityReference("contact", Contact.Id);
+                            Task["description"] = " Hello world This Is Me ";
+                            Mytrace.Trace("set description");
+                            Task["regardingobjectid"] = Contact.ToEntityReference();
+                            Mytrace.Trace("we got our contact ref" + Contact.ToEntityReference().ToString());
+                            Task["actualdurationminutes"] = 2;
+                            Task["prioritycode"] = new OptionSetValue(2);
+                            Task["scheduledend"] = DateTime.Now;
+                            Mytrace.Trace("3");
+                            
+                            service.Create(Task);
+
                         }
                         catch (FaultException<OrganizationServiceFault> ex)
                         {
@@ -74,74 +95,9 @@ namespace ClassLibrary2
             }
     }
 }
+
 ```
 
-**2. Create a task associated to the contact ( adding to the above point, create a task that has the newly created contact as its regarding )**
 
-```c#
-using Microsoft.Xrm.Sdk;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ClassLibrary2
-{
-    public class Class2 : IPlugin
-    {
-        public void Execute(IServiceProvider serviceProvider)
-        {
-            ITracingService Mytrace = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
-            IExecutionContext context = (IExecutionContext)serviceProvider.GetService(typeof(IExecutionContext));
-
-            IOrganizationServiceFactory serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-            IOrganizationService service = serviceFactory.CreateOrganizationService(context.UserId);
-
-
-            if (context.InputParameters.Contains("Target") &&
-           context.InputParameters["Target"] is Entity)
-            {
-                if (context.Depth > 2)
-                    return;
-
-                Entity contact = (Entity)context.InputParameters["Target"];
-                if (contact.LogicalName == "contact")
-                {
-                    if (context.MessageName.ToLower() == "create" || context.MessageName.ToLower() == "update")
-                    {
-                        try
-                        {
-
-
-                            string FirstName = (string)contact["firstname"];
-                            string LastName = contact.GetAttributeValue<string>("lastname");
-                            Entity Task = new Entity("task");
-                            Mytrace.Trace("Got task entity");
-                            Task["subject"] = FirstName + " " + LastName + "Contact Created";
-
-                            Task["description"] = " Hello world This Is Me ";
-                            Mytrace.Trace("set description");
-                            Task["regardingobjectid"] = contact.ToEntityReference();
-                            Mytrace.Trace("we got our contact ref" + contact.ToEntityReference().ToString());
-                            Task["actualdurationminutes"] = 2;
-                            Task["prioritycode"] = new OptionSetValue(2);
-                            Task["scheduledend"] = DateTime.Now;
-                            service.Create(Task);
-                        }
-
-                        catch (Exception ex)
-                        {
-                            Mytrace.Trace("MyPlugin: {0}", ex.ToString());
-                            throw;
-                        }
-                    }
-                }
-
-            }
-        }
-    }
-}
-```
 
 ![114.png](../../114.png)
