@@ -13,8 +13,13 @@
 //     );
    
 //     }
- 
+ function reloadAndSave(currentCaseId){
+    parent.Xrm.Page.data.entity.save();
+    window.location.reload(true);
+    var currentCaseId = Xrm.Page.data.entity.getId();
+ }
 function getCarDetails(executionContext){
+
 
     let formContext = executionContext.getFormContext();
     var recordId = formContext.data.entity.getId();
@@ -35,6 +40,9 @@ recordId = recordId.replace('{', '').replace('}', '');
                 if (result.hasOwnProperty("eng_Car")) {
                     var eng_Car_eng_licenseenddate = result["eng_Car"]["eng_licenseenddate"];
                     alert(eng_Car_eng_licenseenddate);
+                    Xrm.Page.getAttribute ("eng_licenceenddatefromcar"). setValue (eng_Car_eng_licenseenddate);
+                    window.location.reload(true);
+                    parent.Xrm.Page.data.entity.save();
                 }
             } else {
                 Xrm.Utility.alertDialog(this.statusText);
