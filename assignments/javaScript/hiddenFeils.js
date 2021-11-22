@@ -28,6 +28,14 @@ if(nameCar!= null && nameCustomer!=null){
 
  }
 
+ function subject2(data){
+    let carForm = data.getFormContext();
+    let sub = carForm.getAttribute("eng_ivoicee").getValue();
+    Xrm.Page.getAttribute ("eng_name").setValue(" Invoice for "+sub[0].name);
+
+ }
+
+
 
  function getCarDetails(executionContext){
 debugger;
